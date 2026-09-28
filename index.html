@@ -12,6 +12,10 @@ a{color:inherit;text-decoration:none}.wrap{max-width:1080px;margin:auto;padding:
 nav{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;background:rgba(251,252,254,.94);position:sticky;top:0;z-index:20;backdrop-filter:blur(10px)}
 .logo{font-weight:800;letter-spacing:.04em}.navlinks{display:flex;gap:24px;font-size:14px;color:var(--muted)}.navlinks a:hover{color:var(--accent)}
 .hero{padding:92px 0 76px;border-bottom:1px solid var(--line);background:#fff}.eyebrow{font-size:13px;font-weight:700;color:var(--accent);letter-spacing:.12em;text-transform:uppercase}.hero h1{font-size:clamp(42px,7vw,72px);line-height:1.04;margin:12px 0 18px;letter-spacing:-.045em}.hero h1 span{display:block;color:#475467;font-size:.48em;letter-spacing:-.02em;margin-top:12px}.lead{max-width:760px;color:#475467;font-size:19px;margin:0 0 28px}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border:1px solid #d7dce5;border-radius:8px;background:#fff;font-weight:700;font-size:14px}.btn.primary{background:var(--dark);color:#fff;border-color:var(--dark)}.btn:hover{transform:translateY(-1px)}
+.icon-btn{width:42px;height:42px;padding:0;justify-content:center;border-radius:8px}
+.icon-btn svg{width:19px;height:19px;display:block}
+.icon-btn[aria-label="Email"] svg{width:20px;height:20px}
+.hero-icons{display:flex;gap:10px;flex-wrap:wrap}
 section{padding:76px 0;border-bottom:1px solid var(--line);background:#fff} section:nth-of-type(even){background:#f8fafc}.sectionhead{display:flex;gap:28px;align-items:baseline;margin-bottom:32px}.sectionhead h2{font-size:28px;margin:0;letter-spacing:-.025em}.sectionhead p{margin:0;color:var(--muted);font-size:14px}
 .focus-grid,.skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.focus,.skill{background:#fff;box-shadow:0 1px 2px rgba(15,23,42,.03);border:1px solid var(--line);border-radius:10px;padding:22px}.focus h3,.skill h3{margin:0 0 7px;font-size:17px}.focus p,.skill p{margin:0;color:var(--muted);font-size:14px}
 .work{border-top:1px solid var(--line);padding:26px 0}.work:first-child{border-top:0}.work-top{display:flex;justify-content:space-between;gap:20px}.work h3{margin:0;font-size:20px}.work .tagline{color:var(--muted);font-size:14px;margin:4px 0 10px}.stack{font-size:12px;color:#344054;display:flex;gap:7px;flex-wrap:wrap}.stack span{background:var(--soft);padding:3px 8px;border-radius:5px}.work p{max-width:800px;color:#475467;margin:12px 0 0}
@@ -34,10 +38,20 @@ footer{padding:26px 0;color:#7a8495;font-size:13px;display:flex;justify-content:
 <p class="lead">IT Automation Engineer with 8+ years of experience across IT operations, identity and access management, endpoint management, SaaS administration, automation and security. I build API-driven workflows and internal platforms that reduce repetitive work, improve access governance and strengthen auditability.</p>
 <div class="actions">
 <a class="btn primary" href="#work">View professional work →</a>
-<a class="btn" href="https://github.com/vgsbuilds" target="_blank" rel="noopener">GitHub ↗</a>
-<a class="btn" href="https://www.linkedin.com/in/vignesh-s-896a36124/" target="_blank" rel="noopener">LinkedIn ↗</a>
-<a class="btn" href="mailto:vigneshsubramanian2910@gmail.com">Email me ↗</a>
-<a class="btn" href="Vignesh-Resume.pdf" target="_blank">Resume ↗</a>
+<div class="hero-icons" aria-label="Professional links">
+<a class="btn icon-btn" href="https://github.com/vgsbuilds" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.25c-3.34.73-4.04-1.42-4.04-1.42-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.74.08-.74 1.2.09 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48.99.11-.77.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.94 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.17 0 0 1-.32 3.3 1.23A11.4 11.4 0 0 1 12 6.7c1.02 0 2.05.14 3.01.41 2.29-1.55 3.29-1.23 3.29-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.82.57A12 12 0 0 0 12 .5Z"/></svg>
+</a>
+<a class="btn icon-btn" href="https://www.linkedin.com/in/vignesh-s-896a36124/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.58c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.67H9.34V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.62 0 4.29 2.38 4.29 5.48v6.27ZM5.32 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM3.54 20.45H7.1V8.99H3.54v11.46ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0Z"/></svg>
+</a>
+<a class="btn icon-btn" href="mailto:vigneshsubramanian2910@gmail.com" aria-label="Email" title="Email">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+</a>
+<a class="btn icon-btn" href="Vignesh-Resume.pdf" target="_blank" aria-label="Resume" title="Resume">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
+</a>
+</div>
 </div>
 </div>
 </header>
@@ -60,11 +74,11 @@ footer{padding:26px 0;color:#7a8495;font-size:13px;display:flex;justify-content:
 <div class="wrap">
 <div class="sectionhead"><h2>Selected professional work</h2><p>Projects from my professional experience</p></div>
 <div class="work"><div class="work-top"><div><h3>ALMP — Internal Asset & IT Management Platform</h3><div class="tagline">Internal asset and IT management platform</div></div></div><div class="stack"><span>FastAPI</span><span>Pydantic</span><span>Alembic</span><span>Next.js</span><span>React</span><span>JWT</span><span>Google OAuth 2.0</span><span>Docker</span><span>GCP</span></div><p>Built an internal platform with REST APIs, authentication, containerization and cloud deployment to centralize IT and asset workflows.</p></div>
-<div class="work"><div class="work-top"><div><h3>AI Tools Access Request Automation</h3><div class="tagline">Approval and quota workflow automation</div></div></div><div class="stack"><span>Google Apps Script</span><span>Workflow automation</span><span>Approval logic</span></div><p>Automated approver selection based on client/project and requested AI function, with quota and approval rules to standardize access requests.</p></div>
+<div class="work"><div class="work-top"><div><h3>Access Request Automation</h3><div class="tagline">Automated approver selection and access-request workflow</div></div></div><div class="stack"><span>Google Apps Script</span><span>HRMS</span><span>Excel</span><span>Workflow automation</span><span>Approval logic</span></div><p>Built an access-request automation workflow that determines the appropriate approver using employee and organizational data maintained in the HRMS portal or Excel, reducing manual approver identification and standardizing the request process.</p></div>
 <div class="work"><div class="work-top"><div><h3>404 Bot — Slack IT Support Automation</h3><div class="tagline">Contextual IT support and ticket automation</div></div></div><div class="stack"><span>Slack</span><span>Gemini AI</span><span>Jira</span></div><p>Developed an internal Slack support bot that analyzes queries, provides contextual responses and creates Jira tickets when IT intervention is required.</p></div>
 <div class="work"><div class="work-top"><div><h3>User Reconciliation Portal</h3><div class="tagline">SaaS identity reconciliation and audit workflow</div></div></div><div class="stack"><span>SaaS APIs</span><span>HR data</span><span>Reconciliation</span><span>Audit workflows</span></div><p>Built a platform integrating multiple SaaS applications with HR data to identify active-user discrepancies and automate recurring reconciliation.</p></div>
 <div class="work"><div class="work-top"><div><h3>OAuth Suspension Monitoring & Automated Remediation</h3><div class="tagline">Google Workspace account monitoring</div></div></div><div class="stack"><span>Google Apps Script</span><span>Google Workspace</span><span>Slack</span></div><p>Developed scheduled monitoring for suspension events and automated group removal, sign-in-cookie clearing and OAuth-session removal for qualifying inactive accounts.</p></div>
-<div class="work"><div class="work-top"><div><h3>Helpdesk User Management Portal</h3><div class="tagline">Centralized identity administration</div></div></div><div class="stack"><span>Google Groups</span><span>SCIM</span><span>Slack</span><span>Analytics</span></div><p>Developed a centralized portal for helpdesk identity and access administration without requiring direct Google Admin Console access.</p></div>
+<div class="work"><div class="work-top"><div><h3>Helpdesk User Management Portal</h3><div class="tagline">Centralized SaaS identity and access administration</div></div></div><div class="stack"><span>Google Groups</span><span>SCIM</span><span>SaaS APIs</span><span>Slack</span><span>Access Management</span><span>Automation</span></div><p>Developed a centralized portal that enables helpdesk teams to manage user identities and access across multiple SaaS applications from a single interface, eliminating the need to log in to individual administrative consoles.</p></div>
 <div class="work"><div class="work-top"><div><h3>GitHub User Management Automation</h3><div class="tagline">GitHub lifecycle administration</div></div></div><div class="stack"><span>GitHub</span><span>APIs</span><span>Onboarding</span><span>Offboarding</span></div><p>Built an internal GitHub administration tool supporting onboarding, offboarding, repository creation and user/group management with centralized auditability.</p></div>
 <div class="note">Professional work is presented at a high level to respect company confidentiality. No proprietary source code, credentials, customer data or internal URLs are included.</div>
 </div>
@@ -119,9 +133,17 @@ footer{padding:26px 0;color:#7a8495;font-size:13px;display:flex;justify-content:
 <p class="contact-text">I’m interested in opportunities where I can combine hands-on IT operations experience with automation, identity, endpoint management and internal platform engineering.</p>
 <div class="actions">
 <a class="btn" href="mailto:vigneshsubramanian2910@gmail.com">vigneshsubramanian2910@gmail.com</a>
-<a class="btn secondary" href="https://www.linkedin.com/in/vignesh-s-896a36124/" target="_blank" rel="noopener">LinkedIn ↗</a>
-<a class="btn secondary" href="https://github.com/vgsbuilds" target="_blank" rel="noopener">GitHub ↗</a>
-<a class="btn secondary" href="Vignesh-Resume.pdf" target="_blank">Download Resume ↗</a>
+<div class="hero-icons">
+<a class="btn icon-btn" href="https://www.linkedin.com/in/vignesh-s-896a36124/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.58c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.67H9.34V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.62 0 4.29 2.38 4.29 5.48v6.27ZM5.32 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM3.54 20.45H7.1V8.99H3.54v11.46ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0Z"/></svg>
+</a>
+<a class="btn icon-btn" href="https://github.com/vgsbuilds" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.25c-3.34.73-4.04-1.42-4.04-1.42-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.74.08-.74 1.2.09 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48.99.11-.77.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.94 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.17 0 0 1-.32 3.3 1.23A11.4 11.4 0 0 1 12 6.7c1.02 0 2.05.14 3.01.41 2.29-1.55 3.29-1.23 3.29-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.82.57A12 12 0 0 0 12 .5Z"/></svg>
+</a>
+<a class="btn icon-btn" href="Vignesh-Resume.pdf" target="_blank" aria-label="Resume" title="Resume">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
+</a>
+</div>
 </div>
 </div>
 </section>
